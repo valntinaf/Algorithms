@@ -11,12 +11,12 @@ def continuous_subsequence(s):
             mem[m_i][0] = mem[i][0]+s[i]
 
         mem[m_i][1] = max(mem[i][1],mem[m_i][0])
-        print(mem)
 
     print("Memory:")
+    print(mem)
     print("Solution:")
     print(result)
     return 0;
 
-a = [-1,52,-10,9,48,8]
+a = [-1,52,-100,9,48,8]
 continuous_subsequence(a)
