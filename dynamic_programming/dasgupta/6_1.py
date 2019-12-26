@@ -4,6 +4,7 @@ def continuous_subsequence(s):
     sum = 0
     for i in range(len(s)):
         m_i = i+1
+        print(s[i])
         if s[i] < 0:
             if mem[i][0] != 0:
                 mem[m_i][0] = max(mem[i][0]+s[i],s[i])
@@ -11,9 +12,9 @@ def continuous_subsequence(s):
             mem[m_i][0] = mem[i][0]+s[i]
 
         mem[m_i][1] = max(mem[i][1],mem[m_i][0])
+        print(mem)
 
     print("Memory:")
-    print(mem)
     print("Solution:")
     print(result)
     return 0;
